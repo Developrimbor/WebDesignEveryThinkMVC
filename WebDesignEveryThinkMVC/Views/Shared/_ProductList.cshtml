@@ -1,0 +1,31 @@
+﻿@using WebDesignEveryThinkMVC.Models
+@model IEnumerable<ProductModel>
+
+<div class="row">
+
+    @foreach (var urun in Model)
+    {
+        <div class="col-md-3 mt-3">
+            <div class="card">
+                <img class="card-img-top" src="~/Designs/3D/PokemonBall.png" alt="@urun.ProductName">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/Home/Details/@urun.Id"> @urun.ProductName</a>
+                    </h4>
+                    <p class="card-text">
+                        @urun.ProductDescription
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        @urun.ProductPrice
+                    </small>
+                    <a href="/Home/Details/@urun.Id" class="btn btn-primary btn-sm float-end">
+                        İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

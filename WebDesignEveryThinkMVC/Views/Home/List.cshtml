@@ -1,0 +1,34 @@
+﻿@using WebDesignEveryThinkMVC.Models
+@model IEnumerable<ProductModel>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="row">
+
+
+    <div class="col-md-3 mt-3">
+        @Html.Action("GetCategories", "Home")
+    </div>
+
+    <div class="col-md-9 mt-3">
+
+        @if (Model.Count() == 0)
+        {
+            <div class="alert alert-warning" role="alert">
+                Bu kategoride bir ürün bulunamadı.
+            </div>
+        }
+
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                @Model.Count() adet ürün bulunmaktadır.
+            </div>
+        }
+
+        @Html.Partial("_ProductList", Model)
+
+    </div>
+
+</div>
