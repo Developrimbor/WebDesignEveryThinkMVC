@@ -7,7 +7,7 @@ using WebDesignEveryThinkMVC.Entity;
 
 namespace WebDesignEveryThinkMVC.Identity
 {
-    public class IdentityDataContext:IdentityDbContext<ApplicationUser>
+    public class IdentityDataContext : IdentityDbContext<ApplicationUser>
 
     {
         public IdentityDataContext() : base("dataConnection")

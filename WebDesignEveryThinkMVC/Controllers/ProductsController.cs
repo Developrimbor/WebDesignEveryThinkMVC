@@ -10,7 +10,7 @@ using WebDesignEveryThinkMVC.Entity;
 
 namespace WebDesignEveryThinkMVC.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize]
     public class ProductsController : Controller
     {
         private DataContext db = new DataContext();

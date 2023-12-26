@@ -8,6 +8,7 @@ namespace WebDesignEveryThinkMVC.Models
 {
     public class ShippingDetails
     {
+        public int Id { get; set; }
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Lütfen Adres Tanımını Giriniz! ")]

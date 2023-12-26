@@ -8,7 +8,7 @@ using WebDesignEveryThinkMVC.Models;
 
 namespace WebDesignEveryThinkMVC.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize]
     public class OrderController : Controller
     {
         DataContext db = new DataContext();

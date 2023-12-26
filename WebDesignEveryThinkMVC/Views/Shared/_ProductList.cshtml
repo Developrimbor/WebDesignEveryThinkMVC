@@ -1,31 +1,44 @@
 ﻿@using WebDesignEveryThinkMVC.Models
 @model IEnumerable<ProductModel>
 
-<div class="row">
+<div class="container justify-content-center">
 
-    @foreach (var urun in Model)
-    {
-        <div class="col-md-3 mt-3">
-            <div class="card">
-                <img src="/Images/@urun.ProductImage" class="card-img-top" alt="@urun.ProductName">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="/Home/Details/@urun.Id">@urun.ProductName</a>
-                    </h4>
-                    <p class="card-text">
-                        @urun.ProductDescription
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        @urun.ProductPrice
-                    </small>
-                    <a href="/Home/Details/@urun.Id" class="btn btn-primary btn-sm float-end">
-                        İncele
-                    </a>
+    <div class="row">
+        
+        <div class="mt-5 mb-3"
+             style="
+          font-weight: bold;
+          font-size: 25px;
+          text-align: center;">
+            <h2 style="font-weight: bold">
+                POPULAR PRODUCTS
+            </h2>
+        </div>
+
+        @foreach (var urun in Model)
+        {
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="/Images/@urun.ProductImage" class="card-img-top" alt="@urun.ProductName">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/Home/Details/@urun.Id">@urun.ProductName</a>
+                        </h4>
+                        <p class="card-text">
+                            @urun.ProductDescription
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            @urun.ProductPrice
+                        </small>
+                        <a href="/Home/Details/@urun.Id" class="btn btn-primary btn-sm float-end">
+                            İncele
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 
 </div>

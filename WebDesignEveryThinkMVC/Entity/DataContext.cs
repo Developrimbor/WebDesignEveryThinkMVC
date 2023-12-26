@@ -9,9 +9,9 @@ using WebDesignEveryThinkMVC.Models;
 
 namespace WebDesignEveryThinkMVC.Entity
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<ApplicationUser>
     {
-        public DataContext():base("dataConnection")
+        public DataContext() : base("dataConnection")
         {
             
         }
@@ -22,6 +22,7 @@ namespace WebDesignEveryThinkMVC.Entity
         public DbSet<OrderLine> OrderLines { get; set; }
         public DbSet<Register> Registers { get; set; }
         public DbSet<Login> Logins { get; set; }
+        public DbSet<ShippingDetails> ShippingDetailss { get; set; }
 
 
     }
