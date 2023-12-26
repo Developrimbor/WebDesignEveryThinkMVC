@@ -1,9 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"   />
     <title>@ViewBag.Title - ASP.NET Uygulamam</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -12,15 +18,14 @@
 
     <style>
 
-          font-face {
+        font-face {
             font-family: Bai Jamjuree;
             src: url(https://fonts.google.com/specimen/Bai+Jamjuree);
-          }
+        }
 
-          * {
+        * {
             font-family: Bai Jamjuree;
-          }
-
+        }
     </style>
 
 </head>
@@ -41,6 +46,8 @@
                     <li>@Html.ActionLink("Ürünler", "List", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Kişi", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
+                @Html.Action("Summary","Cart")
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
